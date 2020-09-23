@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.project.ui.AuthorViewModel" />
+    </data>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,3 +26,4 @@
         android:id="@+id/btnloggin"
         android:layout_height="wrap_content"/>
 </LinearLayout>
+</layout>

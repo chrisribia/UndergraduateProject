@@ -26,26 +26,14 @@ class AuthorFragment : Fragment() {
     ): View? {
 
 
+
         return inflater.inflate(R.layout.author_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(AuthorViewModel::class.java)
-        btnregister.setOnClickListener {
-            activity?.let {
-                val intent = Intent(it,RegistrationActivity::class.java)
-                it.startActivity(intent)
-            }
 
-        }
-
-        btnloggin.setOnClickListener {
-            activity?.let {
-                val intent = Intent(it,LoginActivity::class.java)
-                it.startActivity(intent)
-            }
-        }
     }
 
 
