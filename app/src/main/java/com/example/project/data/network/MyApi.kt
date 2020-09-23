@@ -16,8 +16,8 @@ interface MyApi {
     @FormUrlEncoded
     @POST("userRegistration.php")
     suspend fun userSignup(
-        @Field("name") name: String,
         @Field("email") email: String,
+        @Field("username") username: String,
         @Field("password") password: String
     ) : Response<AuthResponse>
     companion object{
@@ -31,7 +31,7 @@ interface MyApi {
 
             return Retrofit.Builder()
                 .client(okkHttpclient)
-                .baseUrl("https://localhost/hunproject/v1/")
+                .baseUrl("http://192.168.43.98/hunproject/v1/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(MyApi::class.java)
