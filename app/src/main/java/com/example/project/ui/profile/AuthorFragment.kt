@@ -17,9 +17,6 @@ class AuthorFragment : Fragment(), KodeinAware {
 
     override val kodein by kodein()
 
-    companion object {
-        fun newInstance() = AuthorFragment()
-    }
 
     private lateinit var viewModel: AuthorViewModel
     private val factory: AuthorViewModelFactory by instance()
@@ -31,6 +28,8 @@ class AuthorFragment : Fragment(), KodeinAware {
         val binding: AuthorFragmentBinding =
             DataBindingUtil.inflate(inflater, R.layout.author_fragment, container, false)
         viewModel = ViewModelProvider(this, factory).get(AuthorViewModel::class.java)
+        binding.viewmodel = viewModel
+        binding.lifecycleOwner = this
         return binding.root
     }
 

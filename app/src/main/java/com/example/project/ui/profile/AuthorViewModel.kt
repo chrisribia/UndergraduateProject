@@ -5,9 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.example.project.data.network.repositories.UserRepository
 
 class AuthorViewModel(private val repository: UserRepository) : ViewModel() {
-    // TODO: Implement the ViewModel
-    fun onClickk(view: View) {
 
 
-    }
 }

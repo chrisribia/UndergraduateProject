@@ -6,6 +6,7 @@ import com.example.project.data.network.network.MyApi
 import com.example.project.data.network.repositories.UserRepository
 import com.example.project.data.network.network.NetworkConnectionInterceptor
 import com.example.project.ui.Auth.AuthViewModelFactory
+import com.example.project.ui.debtors.AddAuthorDialogViewModelFactory
 import com.example.project.ui.profile.AuthorViewModelFactory
 import org.kodein.di.Kodein
 
@@ -26,6 +27,7 @@ class MVVMApplication : Application(), KodeinAware {
         bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { AuthorViewModelFactory(instance()) }
+        bind() from provider { AddAuthorDialogViewModelFactory(instance()) }
 
 
     }

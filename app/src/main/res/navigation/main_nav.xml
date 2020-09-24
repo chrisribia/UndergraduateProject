@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/addAuthorDialogFragment"
         android:name="com.example.project.ui.debtors.AddAuthorDialogFragment"
-        android:label="add_author_dialog_fragment"
+        android:label="profile"
         tools:layout="@layout/add_author_dialog_fragment" />
     <fragment
         android:id="@+id/authorFragment"
         android:name="com.example.project.ui.profile.AuthorFragment"
-        android:label="author_fragment"
+        android:label="Welcome"
         tools:layout="@layout/author_fragment" />
 </navigation>

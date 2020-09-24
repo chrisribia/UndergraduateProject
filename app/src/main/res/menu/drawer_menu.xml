@@ -3,15 +3,11 @@
 
 
 
+
     <item
-        android:id="@+id/projectsHomeFragment"
+        android:id="@+id/addAuthorDialogFragment"
         android:icon="@drawable/ic_list"
-        android:title="projects Home"
-        />
-    <item
-        android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_list"
-        android:title="Account"
+        android:title="Profile"
         />
 
 
