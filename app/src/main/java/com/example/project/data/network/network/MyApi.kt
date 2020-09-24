@@ -1,6 +1,7 @@
-package com.example.project.data.network
+package com.example.project.data.network.network
 
-import com.example.project.data.network.responses.AuthResponse
+import com.example.project.data.network.network.responses.AuthResponse
+import com.example.project.data.network.network.responses.LoginResponse
 import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -11,6 +12,12 @@ import retrofit2.http.POST
 
 interface MyApi {
 
+    @FormUrlEncoded
+    @POST("userLogin.php")
+    suspend fun userLogin(
+        @Field("username") username: String,
+        @Field("password") password: String
+    ) : Response<LoginResponse>
 
 
     @FormUrlEncoded
@@ -23,7 +30,7 @@ interface MyApi {
     companion object{
         operator fun invoke(
             networkConnectionInterceptor: NetworkConnectionInterceptor
-        ) : MyApi{
+        ) : MyApi {
 
             val okkHttpclient = OkHttpClient.Builder()
                 .addInterceptor(networkConnectionInterceptor)

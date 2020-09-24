@@ -1,4 +1,4 @@
-package com.example.project.data.network
+package com.example.project.data.network.network
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.ConnectivityManager

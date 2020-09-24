@@ -1,9 +1,10 @@
 package com.example.project
 
 import android.app.Application
-import com.example.project.data.network.MyApi
+import com.example.project.data.network.db.AppDatabase
+import com.example.project.data.network.network.MyApi
 import com.example.project.data.network.repositories.UserRepository
-import com.example.project.data.network.NetworkConnectionInterceptor
+import com.example.project.data.network.network.NetworkConnectionInterceptor
 import com.example.project.ui.Auth.AuthViewModelFactory
 import com.example.project.ui.profile.AuthorViewModelFactory
 import org.kodein.di.Kodein
@@ -20,8 +21,9 @@ class MVVMApplication : Application(), KodeinAware {
     override val kodein = Kodein.lazy {
         import(androidXModule(this@MVVMApplication))
         bind() from singleton { MyApi(instance()) }
-        bind() from singleton { UserRepository(instance()) }
-        bind() from singleton { NetworkConnectionInterceptor(instance())}
+        bind() from singleton { AppDatabase(instance()) }
+        bind() from singleton { UserRepository(instance(),instance()) }
+        bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { AuthorViewModelFactory(instance()) }
 
