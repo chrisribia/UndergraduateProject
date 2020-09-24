@@ -19,4 +19,11 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(nav_view,navController)
         NavigationUI.setupActionBarWithNavController(this,navController,drawer_layout)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return NavigationUI.navigateUp(
+            Navigation.findNavController(this, R.id.fragment),
+            drawer_layout
+        )
+    }
 }
