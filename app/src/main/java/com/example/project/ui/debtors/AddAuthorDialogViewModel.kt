@@ -1,4 +1,4 @@
-package com.example.project.ui
+package com.example.project.ui.debtors
 
 import androidx.lifecycle.ViewModel
 

@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/addAuthorDialogFragment"
-        android:name="com.example.project.ui.AddAuthorDialogFragment"
+        android:name="com.example.project.ui.debtors.AddAuthorDialogFragment"
         android:label="add_author_dialog_fragment"
         tools:layout="@layout/add_author_dialog_fragment" />
     <fragment
         android:id="@+id/authorFragment"
-        android:name="com.example.project.ui.AuthorFragment"
+        android:name="com.example.project.ui.profile.AuthorFragment"
         android:label="author_fragment"
         tools:layout="@layout/author_fragment" />
 </navigation>

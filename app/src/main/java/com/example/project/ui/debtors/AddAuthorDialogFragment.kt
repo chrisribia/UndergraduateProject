@@ -1,6 +1,5 @@
-package com.example.project.ui
+package com.example.project.ui.debtors
 
-import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,35 +7,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.project.R
-import com.example.project.ui.Auth.LoginActivity
-import com.example.project.ui.Auth.RegistrationActivity
-import kotlinx.android.synthetic.main.author_fragment.*
 
-class AuthorFragment : Fragment() {
+class AddAuthorDialogFragment : Fragment() {
 
     companion object {
-        fun newInstance() = AuthorFragment()
+        fun newInstance() = AddAuthorDialogFragment()
     }
 
-    private lateinit var viewModel: AuthorViewModel
+    private lateinit var viewModel: AddAuthorDialogViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-
-
-        return inflater.inflate(R.layout.author_fragment, container, false)
+        return inflater.inflate(R.layout.add_author_dialog_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(AuthorViewModel::class.java)
-
+        viewModel = ViewModelProviders.of(this).get(AddAuthorDialogViewModel::class.java)
+        // TODO: Use the ViewModel
     }
-
-
-
 
 }
