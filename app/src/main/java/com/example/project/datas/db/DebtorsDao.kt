@@ -10,12 +10,15 @@ import com.example.project.datas.db.entities.Debtors
 @Dao
 interface   DebtorsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun saveAllDebtors(weights : List<Debtors>)
+    fun saveAllDebtors(debtors : List<Debtors>)
 
 
 
     @Query("SELECT * FROM Debtors")
-    fun getWeights() : LiveData<List<Debtors>>
+    fun getDebtors() :  List<Debtors>
+
+//    @Query("SELECT * FROM SubAlt WHERE importance = 1 and project=:project and alt=:alt")
+//    fun subCritriaGen(project: String, alt: String): LiveData<List<SubAlt>>
 
 
 }
