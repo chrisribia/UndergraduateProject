@@ -8,6 +8,7 @@ import com.example.project.datas.network.NetworkConnectionInterceptor
 import com.example.project.datas.repositories.AppRepository
 import com.example.project.ui.Auth.AuthViewModelFactory
 import com.example.project.ui.Debtors.DebtorsViewModelFactory
+import com.example.project.ui.creditors.CreditorsViewModelFactory
 import com.example.project.ui.home.AddAuthorDialogViewModelFactory
 import com.example.project.ui.profile.AuthorViewModelFactory
 import org.kodein.di.Kodein
@@ -32,6 +33,7 @@ class MVVMApplication : Application(), KodeinAware {
         bind() from provider { AuthorViewModelFactory(instance()) }
         bind() from provider { AddAuthorDialogViewModelFactory(instance()) }
         bind() from provider { DebtorsViewModelFactory(instance()) }
+        bind() from provider { CreditorsViewModelFactory(instance()) }
 
 
     }

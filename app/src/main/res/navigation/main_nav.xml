@@ -19,4 +19,8 @@
         android:id="@+id/debtorsFragment"
         android:name="com.example.project.ui.Debtors.DebtorsFragment"
         android:label="Debtors" />
+    <fragment
+        android:id="@+id/creditorsFragment"
+        android:name="com.example.project.ui.creditors.creditorsFragment"
+        android:label="Creditors" />
 </navigation>

@@ -1,6 +1,7 @@
 package com.example.project.datas.network
 
 import com.example.project.datas.network.responses.AuthResponse
+import com.example.project.datas.network.responses.CreditorsResponse
 import com.example.project.datas.network.responses.DebtorsResponse
 import com.example.project.datas.network.responses.LoginResponse
 import okhttp3.OkHttpClient
@@ -16,6 +17,10 @@ interface MyApi {
 
     @GET("getDebtors.php")
     suspend fun getDebtors(): Response<DebtorsResponse>
+
+
+    @GET("getCreditors.php")
+    suspend fun getCreditors(): Response<CreditorsResponse>
 
 
     @FormUrlEncoded

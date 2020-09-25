@@ -19,7 +19,7 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
 
-class DebtorsFragment : Fragment(),KodeinAware, RecyclerViewClickListener {
+class DebtorsFragment : Fragment(),KodeinAware,RecyclerViewClickListener {
     override val kodein by kodein()
 
 

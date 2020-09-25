@@ -4,17 +4,19 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.project.datas.db.entities.Creditors
 import com.example.project.datas.db.entities.Debtors
 import com.example.project.datas.db.entities.User
 
 @Database(
-    entities = [User::class,Debtors::class],
+    entities = [User::class,Debtors::class, Creditors::class],
     version = 1
 )
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getUserDao(): UserDao
     abstract fun getDebtorsDao(): DebtorsDao
+    abstract fun getCreditorssDao(): CreditorsDao
 
     companion object {
 

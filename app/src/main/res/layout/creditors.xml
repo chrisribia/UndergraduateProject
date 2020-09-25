@@ -4,8 +4,8 @@
     <data>
 
         <variable
-            name="mdebtor"
-            type="com.example.project.datas.db.entities.Debtors" />
+            name="mcreditor"
+            type="com.example.project.datas.db.entities.Creditors" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/debtor_name"
+                android:text="@string/creditor_name"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
-                android:text="@{mdebtor.debtor_name}" />
+                android:text="@{mcreditor.credotors_name}" />
 
         </LinearLayout>
 
@@ -54,7 +54,7 @@
 
                 android:textAlignment="textEnd"
                 android:layout_height="wrap_content"
-                android:text="@{mdebtor.amount}" />
+                android:text="@{mcreditor.amount}" />
 
         </LinearLayout>
 
@@ -76,7 +76,7 @@
                 android:textAlignment="textEnd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{mdebtor.date_of_payment}" />
+                android:text="@{mcreditor.date_of_payment}" />
 
         </LinearLayout>
 

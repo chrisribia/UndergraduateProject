@@ -5,4 +5,6 @@
     <string name="debtor_name">Debtor Name</string>
     <string name="amount">Amount :</string>
     <string name="pay_date">Pay Date :</string>
+    <string name="creditors">Creditors</string>
+    <string name="creditor_name">Creditor_name</string>
 </resources>
