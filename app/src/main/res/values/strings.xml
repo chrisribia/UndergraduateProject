@@ -2,4 +2,7 @@
     <string name="app_name">Project</string>
     <string name="debtors">Debtors</string>
     <string name="profile">Profile</string>
+    <string name="debtor_name">Debtor Name</string>
+    <string name="amount">Amount :</string>
+    <string name="pay_date">Pay Date :</string>
 </resources>
