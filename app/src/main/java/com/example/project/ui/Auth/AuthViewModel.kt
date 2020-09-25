@@ -1,8 +1,8 @@
 package com.example.project.ui.Auth
 
 import androidx.lifecycle.ViewModel
-import com.example.project.data.network.db.entities.User
-import com.example.project.data.network.repositories.UserRepository
+import com.example.project.datas.db.entities.User
+import com.example.project.datas.repositories.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

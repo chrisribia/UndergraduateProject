@@ -1,8 +1,8 @@
-package com.example.project.ui.debtors
+package com.example.project.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.project.data.network.repositories.UserRepository
+import com.example.project.datas.repositories.UserRepository
 
 class AddAuthorDialogViewModelFactory(
     private val repository: UserRepository

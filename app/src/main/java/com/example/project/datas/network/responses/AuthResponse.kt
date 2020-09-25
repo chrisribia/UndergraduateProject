@@ -1,4 +1,4 @@
-package com.example.project.data.network.network.responses
+package com.example.project.datas.network.responses
 
 
 

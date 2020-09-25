@@ -1,4 +1,4 @@
-package com.example.project.data.network.db.entities
+package com.example.project.datas.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

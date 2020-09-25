@@ -1,12 +1,14 @@
 package com.example.project
 
 import android.app.Application
-import com.example.project.data.network.db.AppDatabase
-import com.example.project.data.network.network.MyApi
-import com.example.project.data.network.repositories.UserRepository
-import com.example.project.data.network.network.NetworkConnectionInterceptor
+import com.example.project.datas.db.AppDatabase
+import com.example.project.datas.network.MyApi
+import com.example.project.datas.repositories.UserRepository
+import com.example.project.datas.network.NetworkConnectionInterceptor
+import com.example.project.datas.repositories.AppRepository
 import com.example.project.ui.Auth.AuthViewModelFactory
-import com.example.project.ui.debtors.AddAuthorDialogViewModelFactory
+import com.example.project.ui.Debtors.DebtorsViewModelFactory
+import com.example.project.ui.home.AddAuthorDialogViewModelFactory
 import com.example.project.ui.profile.AuthorViewModelFactory
 import org.kodein.di.Kodein
 
@@ -24,10 +26,12 @@ class MVVMApplication : Application(), KodeinAware {
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
         bind() from singleton { UserRepository(instance(),instance()) }
+        bind() from singleton { AppRepository(instance(),instance()) }
         bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { AuthorViewModelFactory(instance()) }
         bind() from provider { AddAuthorDialogViewModelFactory(instance()) }
+        bind() from provider { DebtorsViewModelFactory(instance()) }
 
 
     }

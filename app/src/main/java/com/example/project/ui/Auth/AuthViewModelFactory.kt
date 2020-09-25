@@ -2,7 +2,7 @@ package com.example.project.ui.Auth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.project.data.network.repositories.UserRepository
+import com.example.project.datas.repositories.UserRepository
 
 class AuthViewModelFactory(
     private val repository: UserRepository

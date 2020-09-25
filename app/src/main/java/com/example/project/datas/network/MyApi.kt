@@ -1,7 +1,7 @@
-package com.example.project.data.network.network
+package com.example.project.datas.network
 
-import com.example.project.data.network.network.responses.AuthResponse
-import com.example.project.data.network.network.responses.LoginResponse
+import com.example.project.datas.network.responses.AuthResponse
+import com.example.project.datas.network.responses.LoginResponse
 import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit

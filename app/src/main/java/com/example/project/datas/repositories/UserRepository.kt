@@ -1,11 +1,11 @@
-package com.example.project.data.network.repositories
+package com.example.project.datas.repositories
 
-import com.example.project.data.network.db.AppDatabase
-import com.example.project.data.network.db.entities.User
-import com.example.project.data.network.network.MyApi
-import com.example.project.data.network.network.SafeApiRequest
-import com.example.project.data.network.network.responses.AuthResponse
-import com.example.project.data.network.network.responses.LoginResponse
+import com.example.project.datas.db.AppDatabase
+import com.example.project.datas.db.entities.User
+import com.example.project.datas.network.MyApi
+import com.example.project.datas.network.SafeApiRequest
+import com.example.project.datas.network.responses.AuthResponse
+import com.example.project.datas.network.responses.LoginResponse
 
 class UserRepository( private val api: MyApi,
                       private val db: AppDatabase

@@ -1,4 +1,4 @@
-package com.example.project.data.network.network
+package com.example.project.datas.network
 import com.example.project.utils.ApiException
 import org.json.JSONException
 import org.json.JSONObject

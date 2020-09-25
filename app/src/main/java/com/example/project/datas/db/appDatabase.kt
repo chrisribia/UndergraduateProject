@@ -1,10 +1,10 @@
-package com.example.project.data.network.db
+package com.example.project.datas.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.project.data.network.db.entities.User
+import com.example.project.datas.db.entities.User
 
 @Database(
     entities = [User::class],

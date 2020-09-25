@@ -1,4 +1,4 @@
-package com.example.project.data.network.db
+package com.example.project.datas.db
 
 
 import androidx.lifecycle.LiveData
@@ -6,8 +6,8 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.*
 import androidx.room.Query
-import com.example.project.data.network.db.entities.CURRENT_USER_ID
-import com.example.project.data.network.db.entities.User
+import com.example.project.datas.db.entities.CURRENT_USER_ID
+import com.example.project.datas.db.entities.User
 
 @Dao
 interface UserDao{

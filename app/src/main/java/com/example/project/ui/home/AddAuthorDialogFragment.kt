@@ -1,4 +1,4 @@
-package com.example.project.ui.debtors
+package com.example.project.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.project.R
 import com.example.project.databinding.AddAuthorDialogFragmentBinding
-import com.example.project.ui.profile.AuthorViewModelFactory
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
