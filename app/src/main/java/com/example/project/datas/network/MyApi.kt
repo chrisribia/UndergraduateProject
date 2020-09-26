@@ -1,9 +1,6 @@
 package com.example.project.datas.network
 
-import com.example.project.datas.network.responses.AuthResponse
-import com.example.project.datas.network.responses.CreditorsResponse
-import com.example.project.datas.network.responses.DebtorsResponse
-import com.example.project.datas.network.responses.LoginResponse
+import com.example.project.datas.network.responses.*
 import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -24,11 +21,29 @@ interface MyApi {
 
 
     @FormUrlEncoded
+    @POST("SaveCreditors.php")
+    suspend fun addCreditor(
+        @Field("name") name: String,
+        @Field("tel") tel: String ,
+        @Field("amount") amount: String,
+        @Field("date") date: String
+    ) : Response<AddCreditorRespose>
+
+    @FormUrlEncoded
+    @POST("SaveDeptor.php")
+    suspend fun addDebtor(
+        @Field("name") name: String,
+        @Field("tel") tel: String,
+        @Field("amount") amount: String,
+        @Field("date") date: String
+    ): Response<AddDebtorRespose>
+
+    @FormUrlEncoded
     @POST("userLogin.php")
     suspend fun userLogin(
         @Field("username") username: String,
         @Field("password") password: String
-    ) : Response<LoginResponse>
+    ): Response<LoginResponse>
 
 
     @FormUrlEncoded

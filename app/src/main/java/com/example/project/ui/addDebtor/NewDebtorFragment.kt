@@ -29,6 +29,7 @@ class NewDebtorFragment : Fragment(),KodeinAware {
         val binding : NewDebtorFragmentBinding = DataBindingUtil.inflate(inflater,R.layout.new_debtor_fragment,container,false)
         viewModel = ViewModelProvider(this,factory).get(NewDebtorViewModel::class.java)
         binding.viewmodel = viewModel
+        binding.lifecycleOwner = this
         return binding.root
     }
 

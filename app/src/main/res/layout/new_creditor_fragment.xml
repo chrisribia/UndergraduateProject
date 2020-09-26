@@ -31,7 +31,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-
+                android:text="@={viewmodel.name}"
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
@@ -49,6 +49,7 @@
 
             <EditText
                 android:layout_width="match_parent"
+                android:text="@={viewmodel.tel}"
                 android:layout_height="wrap_content"
                 android:inputType="phone" />
         </LinearLayout>
@@ -68,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:inputType="number"
 
+                android:text="@={viewmodel.amount}"
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
@@ -85,6 +87,8 @@
             <EditText
                 android:id="@+id/editTextDate"
                 android:layout_width="match_parent"
+
+                android:text="@={viewmodel.date}"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="date" />
@@ -101,6 +105,7 @@
                 android:backgroundTint="@android:color/white"
                 android:text="Add"
                 android:textAllCaps="false"
+                android:onClick="@{viewmodel::saveCreditor}"
                 android:textColor="@android:color/black" />
         </LinearLayout>
 

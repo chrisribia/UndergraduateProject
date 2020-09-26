@@ -7,6 +7,9 @@ import com.example.project.datas.db.entities.Creditors
 import com.example.project.datas.db.entities.Debtors
 import com.example.project.datas.network.MyApi
 import com.example.project.datas.network.SafeApiRequest
+import com.example.project.datas.network.responses.AddCreditorRespose
+import com.example.project.datas.network.responses.AddDebtorRespose
+import com.example.project.datas.network.responses.AuthResponse
 import com.example.project.utils.Coroutines
 
 class AppRepository(
@@ -39,7 +42,9 @@ class AppRepository(
             e.printStackTrace()
         }
 
-    }suspend fun fetchDebtors() {
+    }
+
+    suspend fun fetchDebtors() {
         try {
             val response = apiRequest { api.getDebtors() }
             debtor.postValue(response.debtors)
@@ -60,7 +65,8 @@ class AppRepository(
         }
 
     }
-   private fun saveDebtors(debtorslist: List<Debtors>) {
+
+    private fun saveDebtors(debtorslist: List<Debtors>) {
         try {
             Coroutines.io {
                 db.getDebtorsDao().saveAllDebtors(debtorslist)
@@ -72,8 +78,26 @@ class AppRepository(
     }
 
 
-    suspend fun getDebtors()    = db.getDebtorsDao().getDebtors()
-    suspend fun getCreditors()    = db.getCreditorssDao().getCreditors()
+    fun getDebtors() = db.getDebtorsDao().getDebtors()
+    fun getCreditors() = db.getCreditorssDao().getCreditors()
+
+    suspend fun addCreditor1(
+        name: String,
+        tel: String,
+        amount: String,
+        date: String
+    ): AddCreditorRespose {
+        return apiRequest { api.addCreditor(name, tel, amount, date) }
+    }
+
+    suspend fun addDebtor1(
+        name: String,
+        tel: String,
+        amount: String,
+        date: String
+    ): AddDebtorRespose {
+        return apiRequest { api.addDebtor(name, tel, amount, date) }
+    }
 
 
 }
