@@ -3,8 +3,11 @@
     <string name="debtors">Debtors</string>
     <string name="profile">Profile</string>
     <string name="debtor_name">Debtor Name</string>
-    <string name="amount">Amount :</string>
     <string name="pay_date">Pay Date :</string>
     <string name="creditors">Creditors</string>
     <string name="creditor_name">Creditor_name</string>
+    <string name="date_of_payment">Date of Payment</string>
+    <string name="amount">Amount :</string>
+    <string name="telphone">Telphone :</string>
+    <string name="creditors_name">Creditors Name</string>
 </resources>
