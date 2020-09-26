@@ -1,8 +1,10 @@
 package com.example.project.ui.creditors
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
 import com.example.project.datas.db.entities.Creditors
 import com.example.project.datas.repositories.AppRepository
 import com.example.project.utils.Coroutines
@@ -36,5 +38,10 @@ class CreditorsViewModel(private val repository: AppRepository) : ViewModel() {
         if (::job.isInitialized) job.cancel()
     }
 
+    fun onClickToAddCreditorFragment(view: View) {
+
+        val action = creditorsFragmentDirections.actionCreditorsFragmentToNewCreditorFragment()
+        Navigation.findNavController(view).navigate(action)
+    }
 
 }

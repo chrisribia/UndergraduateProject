@@ -18,9 +18,35 @@
     <fragment
         android:id="@+id/debtorsFragment"
         android:name="com.example.project.ui.Debtors.DebtorsFragment"
-        android:label="Debtors" />
+        android:label="Debtors" >
+        <action
+            android:id="@+id/action_debtorsFragment_to_newDebtorFragment"
+            app:destination="@id/newDebtorFragment" />
+    </fragment>
     <fragment
         android:id="@+id/creditorsFragment"
         android:name="com.example.project.ui.creditors.creditorsFragment"
-        android:label="Creditors" />
+        android:label="Creditors" >
+        <action
+            android:id="@+id/action_creditorsFragment_to_newCreditorFragment"
+            app:destination="@id/newCreditorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCreditorFragment"
+        android:name="com.example.project.ui.addCreditors.NewCreditorFragment"
+        android:label="new_creditor_fragment"
+        tools:layout="@layout/new_creditor_fragment" >
+        <action
+            android:id="@+id/action_newCreditorFragment_to_creditorsFragment"
+            app:destination="@id/creditorsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDebtorFragment"
+        android:name="com.example.project.ui.addDebtor.NewDebtorFragment"
+        android:label="new_debtor_fragment"
+        tools:layout="@layout/new_debtor_fragment" >
+        <action
+            android:id="@+id/action_newDebtorFragment_to_debtorsFragment"
+            app:destination="@id/debtorsFragment" />
+    </fragment>
 </navigation>
