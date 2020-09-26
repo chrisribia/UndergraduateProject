@@ -1,5 +1,6 @@
 package com.example.project.ui.Auth
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -27,7 +28,9 @@ class RegistrationActivity : AppCompatActivity(), KodeinAware {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_registration)
         viewModel = ViewModelProvider(this,factory).get(AuthViewModel::class.java)
 
-
+        binding.textViewLogin.setOnClickListener {
+            startActivity(Intent(this, RegistrationActivity::class.java))
+        }
         binding.buttonSignUp.setOnClickListener {
             userSignup()
         }

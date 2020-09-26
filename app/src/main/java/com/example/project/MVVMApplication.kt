@@ -33,7 +33,7 @@ class MVVMApplication : Application(), KodeinAware {
         bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { AuthorViewModelFactory(instance()) }
-        bind() from provider { AddAuthorDialogViewModelFactory(instance()) }
+        bind() from provider { AddAuthorDialogViewModelFactory(instance(),instance()) }
         bind() from provider { DebtorsViewModelFactory(instance()) }
         bind() from provider { CreditorsViewModelFactory(instance()) }
         bind() from provider { NewDebtorViewModelFactory(instance()) }

@@ -100,4 +100,5 @@ class AppRepository(
     }
 
 
+    fun logout() = db.getUserDao().deleteUser()
 }

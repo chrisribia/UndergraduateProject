@@ -8,7 +8,7 @@ import kotlinx.coroutines.withContext
 
 class AuthViewModel(  private val repository: UserRepository) : ViewModel() {
 
-
+    fun logout() = repository.logout()
     suspend fun userSignup(
         username: String,
         email: String,
@@ -22,4 +22,5 @@ class AuthViewModel(  private val repository: UserRepository) : ViewModel() {
     ) = withContext(Dispatchers.IO) { repository.userLogin(username, password) }
 
     suspend fun saveLoggedInUser(user: List<User>) = repository.saveUser(user)
+    fun getCurrentUser() = repository.getCurrentUser()
 }

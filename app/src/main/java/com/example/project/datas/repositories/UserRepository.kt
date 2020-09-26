@@ -28,4 +28,7 @@ class UserRepository( private val api: MyApi,
     suspend fun saveUser(user: List<User>) = db.getUserDao().upsert(user)
 
     fun getUser() = db.getUserDao().getuser()
+    fun logout() = db.getUserDao().deleteUser()
+    fun getCurrentUser() = db.getUserDao().getCurrentUser()
+
 }
